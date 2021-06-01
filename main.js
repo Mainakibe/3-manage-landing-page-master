@@ -100,7 +100,7 @@ slider.addEventListener('mousemove',(e)=>{
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft
     console.log(x, startx);
-    const walk = x- startx
+    const walk = x- startx;
     console.log(walk);
     slider.scrollLeft= scrollLeft - walk
     console.count(pressed);
