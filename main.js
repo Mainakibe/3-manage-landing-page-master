@@ -67,44 +67,44 @@ function isEmailValid(email) {
 
 
 // slider
-// const slider = document.querySelector('.test-slider')
-// const articles = document.querySelector('.articles')
+const slider = document.querySelector('.test-slider')
+const articles = document.querySelector('.articles')
 
 
-// let pressed = false;
-// let startx;
-// let scrollLeft;
+let pressed = false;
+let startx;
+let scrollLeft;
 
-// slider.addEventListener('mousedown',(e)=>{
-//     pressed=true
-//     slider.style.cursor='grabbing'
-//     startx=e.pageX-slider.offsetLeft
-//     console.log(startx);
-//     scrollLeft=slider.scrollLeft
-// })
-// slider.addEventListener('mouseleave',()=>{
-//     pressed=false
-//     slider.style.cursor='default'
-// })
+slider.addEventListener('mousedown',(e)=>{
+    pressed=true
+    slider.style.cursor='grabbing'
+    startx=e.pageX-slider.offsetLeft
+    console.log(startx);
+    scrollLeft=slider.scrollLeft
+})
+slider.addEventListener('mouseleave',()=>{
+    pressed=false
+    slider.style.cursor='default'
+})
 
-// slider.addEventListener('mouseenter',()=>{
-//     slider.style.cursor='grab'
-// })
+slider.addEventListener('mouseenter',()=>{
+    slider.style.cursor='grab'
+})
 
 
-// slider.addEventListener('mouseup',()=>{
-//     pressed=false
-//     slider.style.cursor='grab'
-// })
-// slider.addEventListener('mousemove',(e)=>{
-//     if(!pressed) return;
-//     e.preventDefault();
-//     const x = e.pageX - slider.offsetLeft
-//     console.log(x, startx);
-//     const walk = x- startx
-//     console.log(walk);
-//     slider.scrollLeft= scrollLeft - walk
-//     console.count(pressed);
-//     console.log(startx);
+slider.addEventListener('mouseup',()=>{
+    pressed=false
+    slider.style.cursor='grab'
+})
+slider.addEventListener('mousemove',(e)=>{
+    if(!pressed) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft
+    console.log(x, startx);
+    const walk = x- startx
+    console.log(walk);
+    slider.scrollLeft= scrollLeft - walk
+    console.count(pressed);
+    console.log(startx);
 
-// })
+})
