@@ -74,11 +74,11 @@ let startx;
 let scrollLeft;
 
 slider.addEventListener('mousedown',(e)=>{
-    pressed=true
+    pressed=true;
     slider.style.cursor='grabbing'
-    startx=e.pageX-slider.offsetLeft
+    startx=e.pageX-slider.offsetLeft;
     console.log(startx);
-    scrollLeft=slider.scrollLeft
+    scrollLeft=slider.scrollLeft;
 })
 
 slider.addEventListener('mouseleave',()=>{
