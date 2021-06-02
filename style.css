@@ -525,7 +525,6 @@ small{
         grid-gap:10px;
         pointer-events: none;
         padding: 60px 0;
-        /* margin-left: 350px; */
     }
      article{
          padding: 0 50px;
@@ -534,6 +533,8 @@ small{
      
      
      /* simplify */
+
+
      .simplify{
          background-image: url('/images/bg-simplify-section-desktop.svg');
          display: flex;
