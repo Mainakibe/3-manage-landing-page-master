@@ -91,13 +91,13 @@ slider.addEventListener('mouseenter',()=>{
 })
 
 slider.addEventListener('mouseup',()=>{
-    pressed=false;
-    slider.style.cursor='grab';
+    pressed=false
+    slider.style.cursor='grab'
 })
 
 slider.addEventListener('mousemove',(e)=>{
-    if(!pressed) return;
-    e.preventDefault();
+    if(!pressed) return
+    e.preventDefault()
     const x = e.pageX - slider.offsetLeft;
     console.log(x, startx);
     const walk = x- startx;
