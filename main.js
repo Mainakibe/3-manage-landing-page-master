@@ -92,7 +92,7 @@ slider.addEventListener('mouseenter',()=>{
 
 slider.addEventListener('mouseup',()=>{
     pressed=false
-    slider.style.cursor='grab'
+    slider.style.cursor='grab';
 })
 
 slider.addEventListener('mousemove',(e)=>{
