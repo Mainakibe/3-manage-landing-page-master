@@ -87,22 +87,22 @@ slider.addEventListener('mouseleave',()=>{
 })
 
 slider.addEventListener('mouseenter',()=>{
-    slider.style.cursor='grab'
+    slider.style.cursor='grab';
 })
 
 slider.addEventListener('mouseup',()=>{
-    pressed=false
-    slider.style.cursor='grab'
+    pressed=false;
+    slider.style.cursor='grab';
 })
 
 slider.addEventListener('mousemove',(e)=>{
     if(!pressed) return;
     e.preventDefault();
-    const x = e.pageX - slider.offsetLeft
+    const x = e.pageX - slider.offsetLeft;
     console.log(x, startx);
     const walk = x- startx;
     console.log(walk);
-    slider.scrollLeft= scrollLeft - walk
+    slider.scrollLeft= scrollLeft - walk;
     console.count(pressed);
     console.log(startx);
 })
