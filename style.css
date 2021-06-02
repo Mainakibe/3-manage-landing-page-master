@@ -48,8 +48,6 @@ button:hover{
     flex-wrap: wrap;
     min-height: 100vh; 
     background-color: var(--VaryLightGray);
-    
-    /* background-color: hsl(12, 88%, 59%); */
 }
 main{
    
@@ -189,29 +187,63 @@ span{
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 h4{
     font-size: 30px;
     margin-bottom: 40px;
     padding: 40px 0;
 }
+
+.test-slider{
+    height: 70vh;
+    position: relative;
+    margin-bottom: 70px;
+    width: 90%;
+    overflow: hidden;
+}
+.articles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 15px;
+    position: absolute;
+    width: 420%;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 90%);
+    height: 40vh;
+    padding: 0 20px;
+    position: relative;
+    top: 4rem;
+    text-align: center;
+    transition: .5s ease-out;
+    width: 100%;
+}
+article img{
+    position: absolute;
+    top: -3rem;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
 .radio{
     display: none;
 }
 .radio-btns{
-    height: 10%;
+    height: 5%;
     width: 100%;
     background: var(--VaryLightGray);
     position: absolute;
-    top: 125rem;
+    top: 135rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: scaleY(1);
     transform-origin: bottom;
     transition: .3s;
-    /* z-index: 1; */
 }
 .radio-btns >label{
     height: 20px;
@@ -230,51 +262,19 @@ h4{
 #slide1:checked ~ .first{
     margin-left:0;
 }
-#slide2:checked ~ .first{
-    margin-left:-20%;
+#slide2:checked ~ article{
+    left: -102.8%;
 }
-#slide3:checked ~ .first{
-    margin-left:-40%;
+ #slide3:checked ~ article{
+     left: -205.3%;
 }
-#slide4:checked ~ .first{
-    margin-left:-60%;
-}
+#slide4:checked ~ article{
+    left: -308%;
+} 
 
-.test-slider{
-    height: 70vh;
-    position: relative;
-    margin-bottom: 70px;
-    width: 90%;
-    overflow: hidden;
-}
-.articles{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 15px;
-    width: 420%;
-}
-article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: hsl(0, 0%, 90%);
-    height: 40vh;
-    padding: 0 20px;
-    position: relative;
-    top: 4rem;
-    text-align: center;
-    transition: .5s ease-out;
-}
-article img{
-    position: absolute;
-    top: -3rem;
-    width: 80px;
-    height: 80px;
-    z-index: 1;
-}
 .testimonials button{
-    margin: 40px 0;
+    margin-top: -70px;
+    margin-bottom: 50px;
 }
 /* simplify */
 .simplify{
@@ -290,7 +290,6 @@ h6{
     color: var(--VaryLightGray);
     font-size: 45px;
 }
-
 .simplify-btn{
     background-color: var(--VaryLightGray);
     color: var(--BrightRed);
@@ -353,9 +352,9 @@ input::placeholder{
     font-style: italic;
     position: absolute;
     top: 3rem;
-    right: 16rem;
+    right: 5.5rem;
+    width: 100%;
 }
-
 .footer-links{
     display: flex;
     justify-content: space-between;
@@ -455,8 +454,7 @@ small{
          align-items: center;
          justify-content: space-between;
          width: 70%;
-         border: none;
-         
+         border: none;  
      }
      .links a{
          color: var(--DarkBlue);
@@ -468,8 +466,7 @@ small{
          display: flex;
          align-items: flex-end;
          flex-direction: row;
-         width: 20%;
-         
+         width: 20%;  
      }
      .showcase{
          display: flex;
@@ -526,16 +523,17 @@ small{
         grid-template-columns: repeat(4,1fr);
         width: 133.6%;
         grid-gap:10px;
-        /* position: absolute; */
         pointer-events: none;
         padding: 60px 0;
+        /* margin-left: 350px; */
     }
      article{
-         padding: 0 20px;
+         padding: 0 50px;
          width: 100%; 
      }
      
-
+     
+     /* simplify */
      .simplify{
          background-image: url('/images/bg-simplify-section-desktop.svg');
          display: flex;
@@ -593,4 +591,77 @@ small{
          margin-left: 127vh;
      }
   
+}
+@media screen and (device-aspect-ratio: 40/71) {
+    .wrapper{
+        width: 100%;
+    }
+    .mobile-nav{
+        background-color: hsl(0, 0%, 96%); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute; 
+        top: 4rem;
+        right: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+        width:90%;
+        height: 68vh;
+        transform: translateY(-140%);
+        transition: transform 0.2s;  
+        z-index: 1;
+    }
+    .showMenu{
+        transform: translateY(0);
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        border-bottom: 1px solid var(--Gray);
+        width: 100%;
+    }
+    .showcase-img img{
+        width: 300px;
+    }
+    h3{
+        font-size: 13px;
+    }
+    #slide1:checked ~ .first{
+        margin-left:0;
+    }
+    #slide2:checked ~ article{
+        left: -102.8%;
+    }
+     #slide3:checked ~ article{
+         left: -205.3%;
+    }
+    #slide4:checked ~ article{
+        left: -313%;
+    }
+    article{
+        height: 48vh;
+    }
+    .radio-btns{
+        top: 137rem;
+    }
+    .simplify{
+        height: 60vh;
+    }
+    footer{
+        height: 80vh;
+    }
+    small{
+        font-size: 10px;
+        width: 100%;
+        left: -5rem;  
+    }
+    
 }
