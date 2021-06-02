@@ -51,14 +51,14 @@ function failureError(input,message){
         formInput.classList.add('error');
 
         const span=formInput.querySelector('.error-msg')
-        span.innerText=message
-        span.style.opacity='1'
+        span.innerText=message;
+        span.style.opacity='1';
 }
 function success(input){
         const formInput =form[input].parentNode
         formInput.classList.remove('error')
         const span=formInput.querySelector('span')
-        span.style.opacity='0'
+        span.style.opacity='0';
 }
 function isEmailValid(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -82,12 +82,12 @@ slider.addEventListener('mousedown',(e)=>{
 })
 
 slider.addEventListener('mouseleave',()=>{
-    pressed=false
-    slider.style.cursor='default'
+    pressed=false;
+    slider.style.cursor='default';
 })
 
 slider.addEventListener('mouseenter',()=>{
-    slider.style.cursor='grab'
+    slider.style.cursor='grab';
 })
 
 slider.addEventListener('mouseup',()=>{
@@ -96,13 +96,13 @@ slider.addEventListener('mouseup',()=>{
 })
 
 slider.addEventListener('mousemove',(e)=>{
-    if(!pressed) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft
+    if(!pressed) return
+    e.preventDefault()
+    const x = e.pageX - slider.offsetLeft;
     console.log(x, startx);
     const walk = x- startx;
     console.log(walk);
-    slider.scrollLeft= scrollLeft - walk
+    slider.scrollLeft= scrollLeft - walk;
     console.count(pressed);
     console.log(startx);
 })
