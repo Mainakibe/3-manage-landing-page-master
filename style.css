@@ -189,7 +189,6 @@ span{
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 h4{
     font-size: 30px;
@@ -211,9 +210,8 @@ h4{
     transform: scaleY(1);
     transform-origin: bottom;
     transition: .3s;
-    /* z-index: 1; */
 }
-.radio-btns >label{
+.radio-btns > label{
     height: 20px;
     width: 20px;
     border: 3px solid hsl(0, 100%, 74%);
@@ -251,7 +249,7 @@ h4{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 15px;
-    width: 420%;
+    width: 400%;
 }
 article{
     display: flex;
@@ -514,7 +512,7 @@ small{
     
      }
      /* articles */
-     .test-slider{
+     /* .test-slider{
          width: 100%;
          position: absolute;
          top: 90rem;
@@ -526,15 +524,13 @@ small{
         grid-template-columns: repeat(4,1fr);
         width: 133.6%;
         grid-gap:10px;
-        /* position: absolute; */
         pointer-events: none;
         padding: 60px 0;
     }
      article{
          padding: 0 20px;
          width: 100%; 
-     }
-     
+     } */
 
      .simplify{
          background-image: url('/images/bg-simplify-section-desktop.svg');
