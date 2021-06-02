@@ -47,7 +47,7 @@ form.addEventListener('submit',(e)=>{
     }
 })
 function failureError(input,message){
-        const formInput =form[input].parentNode
+        const formInput =form[input].parentNode;
         formInput.classList.add('error');
 
         const span=formInput.querySelector('.error-msg')
