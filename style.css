@@ -14,8 +14,6 @@
 }
 body{
     font-family: 'Be Vietnam',sans-serif;
-    background-image: url('/images/bg-simplify-section-mobile.svg');
-    background-repeat: no-repeat;
 }
 p{
     color: var(--DarkGrayishBlue);
@@ -430,7 +428,7 @@ small{
          display: flex;
          flex-direction: column;
          align-items: center;
-         height: 250vh;
+         height: 150vh;
      }
      header{
          display: flex;
@@ -510,11 +508,17 @@ small{
          margin-left: 70px;
     
      }
+     .lower-part{
+         margin-top: 200px;
+     }
      /* articles */
+     .test-text{
+         margin-bottom: 500px;
+     }
      .test-slider{
          width: 100%;
          position: absolute;
-         top: 90rem;
+         top: 85rem;
          left: 0%;
          overflow: hidden;
      }
@@ -525,7 +529,6 @@ small{
         grid-gap:10px;
         pointer-events: none;
         padding: 60px 0;
-        /* margin-left: 350px; */
     }
      article{
          padding: 0 50px;
