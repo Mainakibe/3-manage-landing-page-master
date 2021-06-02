@@ -43,7 +43,7 @@ form.addEventListener('submit',(e)=>{
         failureError('email','Please insert a valid email')
     }
     else{
-        success('email')
+        success('email');
     }
 })
 function failureError(input,message){
