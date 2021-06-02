@@ -51,14 +51,14 @@ function failureError(input,message){
         formInput.classList.add('error')
 
         const span=formInput.querySelector('.error-msg')
-        span.innerText=message
-        span.style.opacity='1'
+        span.innerText=message;
+        span.style.opacity='1';
 }
 function success(input){
         const formInput =form[input].parentNode
         formInput.classList.remove('error')
         const span=formInput.querySelector('span')
-        span.style.opacity='0'
+        span.style.opacity='0';
 }
 function isEmailValid(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
