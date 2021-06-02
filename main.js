@@ -82,8 +82,8 @@ slider.addEventListener('mousedown',(e)=>{
 })
 
 slider.addEventListener('mouseleave',()=>{
-    pressed=false
-    slider.style.cursor='default'
+    pressed=false;
+    slider.style.cursor='default';
 })
 
 slider.addEventListener('mouseenter',()=>{
